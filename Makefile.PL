@@ -56,10 +56,11 @@ WriteMakefile(
     NAME         => 'Filter::Rijndael',
     VERSION_FROM => File::Spec->catfile( 'lib', 'Filter', 'Rijndael.pm' ), # finds $VERSION
     PREREQ_PM    => {
-            'File::Spec'  => 0,
-            'Test::More'  => 0,
-            'Filter'      => 1.20,
-            'Digest::SHA' => 0,
+            'File::Spec'      => 0,
+            'Test::More'      => 0,
+            'Filter'          => 1.20,
+            'Digest::SHA'     => 0,
+            'Crypt::Rijndael' => 0,
         },
     LIBS         => [''], # e.g., '-lzlib'
     DEFINE       => '-DBYPASS', # e.g., '-DBYPASS'
