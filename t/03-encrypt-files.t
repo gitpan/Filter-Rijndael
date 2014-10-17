@@ -11,7 +11,7 @@ my @test_files = sort grep { /^05-tests-/ && -f File::Spec->catfile( 't', $_ ) }
 closedir $dh;
 
 foreach my $test_file ( @test_files ) {
-    system( sprintf( "%s %s %s", File::Spec->catfile( 'bin', 'encrypt.pl' ), File::Spec->catfile( 't', $test_file ), File::Spec->catfile( 't', sprintf( '%s.t', $test_file ) ) ) );
+    system( sprintf( "%s %s %s %s", $^X, File::Spec->catfile( 'bin', 'encrypt.pl' ), File::Spec->catfile( 't', $test_file ), File::Spec->catfile( 't', sprintf( '%s.t', $test_file ) ) ) );
 }
 
 ok( 1, 'Files encrypted' );
